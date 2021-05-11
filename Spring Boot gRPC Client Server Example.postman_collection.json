@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "0d9c7057-e2d9-41dd-a01a-777f11a4c014",
+		"name": "Spring Boot gRPC Client Server Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/v1/user-ms/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"user-ms",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Elnur\",\n    \"surname\": \"Aliyev\",\n    \"cards\": [\n        {\n            \"holderName\": \"ELNUR ALIYEV\",\n            \"number\": \"5626********1234\",\n            \"type\": \"MASTERCARD\",\n            \"status\": \"EXPIRED\",\n            \"balance\": 0.0,\n            \"expiredAt\": \"12/20\",\n            \"currencies\": [\n                \"AZN\",\n                \"USD\"\n            ],\n            \"specifications\": {\n                \"Width\": \"54mm\",\n                \"Length\": \"85.5mm\"\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/v1/user-ms/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"v1",
+						"user-ms",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
