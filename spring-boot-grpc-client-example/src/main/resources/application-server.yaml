@@ -1,0 +1,4 @@
+server:
+  servlet:
+    context-path: /v1/user-ms/
+  port: 8081

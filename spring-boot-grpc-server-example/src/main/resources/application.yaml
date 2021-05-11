@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: spring-boot-grpc-server-example
+  profiles:
+    include:
+      - db
+      - server
+      - grpc

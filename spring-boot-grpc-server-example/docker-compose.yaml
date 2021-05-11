@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mongo:
+    image: bitnami/mongodb:latest
+    environment:
+      - MONGODB_USERNAME=card
+      - MONGODB_PASSWORD=card
+      - MONGODB_DATABASE=card_db
+    ports:
+      - 27018:27017

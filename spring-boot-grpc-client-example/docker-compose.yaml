@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mongo:
+    image: bitnami/mongodb:latest
+    environment:
+      - MONGODB_USERNAME=user
+      - MONGODB_PASSWORD=user
+      - MONGODB_DATABASE=user_db
+    ports:
+      - 27017:27017

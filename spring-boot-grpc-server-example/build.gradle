@@ -1,0 +1,46 @@
+plugins {
+    id 'org.springframework.boot' version "$springBootVersion"
+    id 'io.spring.dependency-management'
+    id 'java'
+    id 'com.google.protobuf' version "$protobufVersion"
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    src {
+        main {
+            java {
+                srcDirs 'build/generated/source/proto/main/grpc'
+                srcDirs 'build/generated/source/proto/main/java'
+            }
+        }
+    }
+}
+
+dependencies {
+   // implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    implementation "io.grpc:grpc-netty-shaded:$gRPCVersion"
+    implementation "io.grpc:grpc-protobuf:$gRPCVersion"
+    implementation "io.grpc:grpc-stub:$gRPCVersion"
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:$protocVersion"
+    }
+    plugins {
+        grpc {
+            artifact = "io.grpc:protoc-gen-grpc-java:$gRPCVersion"
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+}

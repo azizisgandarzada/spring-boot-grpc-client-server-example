@@ -1,0 +1,4 @@
+server:
+  servlet:
+    context-path: /v1/card-ms/
+  port: 8082

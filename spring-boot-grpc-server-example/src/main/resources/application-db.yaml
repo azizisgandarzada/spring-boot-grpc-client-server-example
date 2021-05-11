@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      username: card
+      password: card
+      database: card_db
+      host: localhost
+      port: 27018
+      auto-index-creation: true
