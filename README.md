@@ -5,7 +5,7 @@ Spring Boot gRPC Client Server Example (Gradle)
 
 * Go to project root folder
 
-* Run command to generate java files from UserService.proto file
+* Run command to generate java files from CardService.proto file
 ```bash
 ./gradlew build
 ```
